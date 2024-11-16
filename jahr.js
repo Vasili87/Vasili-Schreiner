@@ -1,3 +1,5 @@
+// Funktion zum Aktualisieren von Datum in Copyright
+
 document.getElementById("jahr").textContent = new Date().getFullYear();
 
 // Funktion zum Anzeigen des Buttons, wenn gescrollt wird
