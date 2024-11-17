@@ -1,23 +1,21 @@
-/* Globale Einstellungen */
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    
 }
 
-h3 {
-    font-family: 'Exo 2', sans-serif;
-    margin: 0; /* Entfernt Abstände */
-    text-align: center; /* Sicherstellen, dass der Text immer zentriert ist */
+h3{
+    font-family: 'Exo 2', sans-serif; 
 }
 
-h1, h2, h4, h5, h6 {
+h1, h2, h4, h5, h6{
     font-family: 'Exo 2', sans-serif;
     text-transform: uppercase;
-    margin: 0 auto;
-    text-align: center;
 }
 
-p {
+
+
+p{
     color: black;
 }
 
@@ -25,19 +23,22 @@ p {
 /* Headings */
 
 .colored-section{
-    background-color: #6BAAE1;
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
 
 }
 
-.container-fluid {
+
+.container-fluid{
     padding: 3% 15% 3%;
 }
 
 
 .navbar{
-    background-color: #6BAAE1;
+    
     padding-bottom: 0 0 4.5rem;
 }
+
+
 
 .navbar-brand {
     font-family: 'Courier New', Courier, monospace;
@@ -54,28 +55,51 @@ p {
 }
 
 .picture{
-    margin-top: 10%;
+    border-style: solid;
+    
+    width: 200px;
 }
 
-.btn {
+.btn{
     border-radius: 0%;
+    background-color: #0e5491;
+    margin-bottom: 20px;
+    
 }
 
-/* Über Mich */
-.aboutMe, .portfolioStyle, .contactMe {
+/*Über Mich*/
+
+.aboutMe, .portfolioStyle, .contactMe{
     padding: 3% 30%;
     text-align: left;
     display: block;
 }
 
-/* Für kleinere Bildschirme */
+
+/*wenn bildschirm zu klein*/
+
 @media(max-width: 1500px) {
-    .aboutMe, .portfolioStyle, .contactMe {
+
+    .aboutMe, .portfolioStyle, .contactMe{
         text-align: center;
         padding: 3% 7%;
     }
-
+    
+    .picture{
+        margin: 0 0 20px 0;
+        width: 100%; /* Passt das Bild an */
+        z-index: 2; /* Das Bild bleibt im Vordergrund */
+        position: relative;
+    }
    
+
+    .position-relative {
+        position: relative;
+      }
+
+
+
+      
    
 }
 
@@ -88,25 +112,25 @@ p {
     height: auto;
     display: block;
     margin: 0 auto;
-}
+  }
 
-.skill-row {
+.skill-row{
     margin-top: 3%;
 }
+
 
 .skill-item {
     display: inline-block;
     text-align: center;
     margin: 50px;
-}
+  }
+
 
 .stars {
     font-size: 25px;
     color: rgb(161, 140, 16);
     margin-top: 5px;
     font-family: Arial, sans-serif;
-<<<<<<< HEAD
-=======
   }
 
 
@@ -123,29 +147,19 @@ p {
 
 .portfolioStyle{
     font-family: 'Exo 2', sans-serif;
-    background-color: #6BAAE1;
->>>>>>> parent of dcd3032 (Hintergrund und Bild angepasst)
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
 }
 
-/* Portfolio Bereich */
-.projectImg {
-    margin: 3% 0;
-    width: 100%;
-}
 
-.portfolioStyle {
-    font-family: 'Exo 2', sans-serif;
-    background-color: #6BAAE1;
-}
+/*KontaktaufnahmeBereich*/
 
-/* Kontaktaufnahme Bereich */
-.contactBottom {
+.contactBottom{
     margin-bottom: 10%;
 }
 
-.btnEnd {
+.btnEnd{
     margin: 2% 0%;
-}
+    }
 
 
 
@@ -153,28 +167,34 @@ p {
 
 
 .footer{
-    background-color: #6BAAE1;
-    padding: 10%;
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
+    padding: 15px;
+      
 }
 
 
 
-/* Scroll Pfeil */
+/*Scroll Pfeil*/
+
+
 #nachOben {
-    display: none;
+    display: none; /* Standardmäßig verstecken */
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 100;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
+    font-size: 25px;
+    
+    
     border: none;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 30%;
     cursor: pointer;
 }
+ 
 
-#nachOben:hover {
-    background-color: #0056b3;
+
+#nachOben:hover, .btn:hover {
+    background-color: #a9c7e9;
 }
+
