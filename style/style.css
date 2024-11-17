@@ -1,21 +1,23 @@
+/* Globale Einstellungen */
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    
 }
 
-h3{
-    font-family: 'Exo 2', sans-serif; 
+h3 {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0; /* Entfernt Abstände */
+    text-align: center; /* Sicherstellen, dass der Text immer zentriert ist */
 }
 
-h1, h2, h4, h5, h6{
+h1, h2, h4, h5, h6 {
     font-family: 'Exo 2', sans-serif;
     text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
 }
 
-
-
-p{
+p {
     color: black;
 }
 
@@ -23,22 +25,19 @@ p{
 /* Headings */
 
 .colored-section{
-    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
+    background-color: #6BAAE1;
 
 }
 
-
-.container-fluid{
+.container-fluid {
     padding: 3% 15% 3%;
 }
 
 
 .navbar{
-    
+    background-color: #6BAAE1;
     padding-bottom: 0 0 4.5rem;
 }
-
-
 
 .navbar-brand {
     font-family: 'Courier New', Courier, monospace;
@@ -55,51 +54,28 @@ p{
 }
 
 .picture{
-    border-style: solid;
-    
-    width: 200px;
+    margin-top: 10%;
 }
 
-.btn{
+.btn {
     border-radius: 0%;
-    background-color: #0e5491;
-    margin-bottom: 20px;
-    
 }
 
-/*Über Mich*/
-
-.aboutMe, .portfolioStyle, .contactMe{
+/* Über Mich */
+.aboutMe, .portfolioStyle, .contactMe {
     padding: 3% 30%;
     text-align: left;
     display: block;
 }
 
-
-/*wenn bildschirm zu klein*/
-
+/* Für kleinere Bildschirme */
 @media(max-width: 1500px) {
-
-    .aboutMe, .portfolioStyle, .contactMe{
+    .aboutMe, .portfolioStyle, .contactMe {
         text-align: center;
         padding: 3% 7%;
     }
-    
-    .picture{
-        margin: 0 0 20px 0;
-        width: 100%; /* Passt das Bild an */
-        z-index: 2; /* Das Bild bleibt im Vordergrund */
-        position: relative;
-    }
+
    
-
-    .position-relative {
-        position: relative;
-      }
-
-
-
-      
    
 }
 
@@ -112,25 +88,25 @@ p{
     height: auto;
     display: block;
     margin: 0 auto;
-  }
-
-.skill-row{
-    margin-top: 3%;
 }
 
+.skill-row {
+    margin-top: 3%;
+}
 
 .skill-item {
     display: inline-block;
     text-align: center;
     margin: 50px;
-  }
-
+}
 
 .stars {
     font-size: 25px;
     color: rgb(161, 140, 16);
     margin-top: 5px;
     font-family: Arial, sans-serif;
+<<<<<<< HEAD
+=======
   }
 
 
@@ -147,19 +123,29 @@ p{
 
 .portfolioStyle{
     font-family: 'Exo 2', sans-serif;
-    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
+    background-color: #6BAAE1;
+>>>>>>> parent of dcd3032 (Hintergrund und Bild angepasst)
 }
 
+/* Portfolio Bereich */
+.projectImg {
+    margin: 3% 0;
+    width: 100%;
+}
 
-/*KontaktaufnahmeBereich*/
+.portfolioStyle {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #6BAAE1;
+}
 
-.contactBottom{
+/* Kontaktaufnahme Bereich */
+.contactBottom {
     margin-bottom: 10%;
 }
 
-.btnEnd{
+.btnEnd {
     margin: 2% 0%;
-    }
+}
 
 
 
@@ -167,122 +153,28 @@ p{
 
 
 .footer{
-    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
-    padding: 15px;
-      
+    background-color: #6BAAE1;
+    padding: 10%;
 }
 
 
 
-/*Scroll Pfeil*/
-
-
+/* Scroll Pfeil */
 #nachOben {
-    display: none; /* Standardmäßig verstecken */
+    display: none;
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 100;
-    font-size: 25px;
-    
-    
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
     border: none;
     padding: 15px;
-    border-radius: 30%;
+    border-radius: 50%;
     cursor: pointer;
 }
- 
 
-
-#nachOben:hover, .btn:hover {
-    background-color: #a9c7e9;
+#nachOben:hover {
+    background-color: #0056b3;
 }
-
-
-/* Zickzack-Blitze: Horizontale Blitze (hinter Name und Titel) */
-.lightning-horizontal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Hintergrund */
-    background: transparent;
-    overflow: hidden;
-  }
-  
-  @keyframes horizontal-lightning {
-    0%, 100% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    50% {
-      opacity: 1;
-      transform: translateX(100%);
-    }
-  }
-  
-  .lightning-horizontal::before,
-  .lightning-horizontal::after {
-    content: "";
-    position: absolute;
-    height: 4px; /* Blitzhöhe */
-    width: 200px; /* Breite eines Blitzsegments */
-    background: #fff;
-    clip-path: polygon(0 50%, 25% 0, 50% 50%, 75% 0, 100% 50%, 75% 100%, 50% 50%, 25% 100%);
-    animation: horizontal-lightning 6s linear infinite;
-  }
-  
-  .lightning-horizontal::before {
-    top: 22%; /* Position des ersten Blitzes */
-    animation-delay: 0.5s;
-  }
-  
-  .lightning-horizontal::after {
-    top: 65%; /* Position des zweiten Blitzes */
-    animation-delay: 1.5s;
-  }
-  
-  /* Zickzack-Blitze: Vertikale Blitze (hinter dem Foto) */
-  .lightning-vertical {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Hintergrund */
-    background: transparent;
-    overflow: hidden;
-  }
-  
-  @keyframes vertical-lightning {
-    0%, 100% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(100%);
-    }
-  }
-  
-  .lightning-vertical::before,
-  .lightning-vertical::after {
-    content: "";
-    position: absolute;
-    width: 4px; /* Blitzbreite */
-    height: 200px; /* Höhe eines Blitzsegments */
-    background: #fff;
-    clip-path: polygon(50% 0, 100% 25%, 50% 50%, 100% 75%, 50% 100%, 0 75%, 50% 50%, 0 25%);
-    animation: vertical-lightning 4s linear infinite;
-  }
-  
-  .lightning-vertical::before {
-    left: 5%; /* Position des ersten Blitzes */
-    animation-delay: 0.5s;
-  }
-  
-  .lightning-vertical::after {
-    left: 95%; /* Position des zweiten Blitzes */
-    animation-delay: 1.5s;
-  }
