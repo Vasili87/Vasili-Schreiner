@@ -23,7 +23,7 @@ p{
 /* Headings */
 
 .colored-section{
-    background-color: #6BAAE1;
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
 
 }
 
@@ -34,7 +34,7 @@ p{
 
 
 .navbar{
-    background-color: #6BAAE1;
+    
     padding-bottom: 0 0 4.5rem;
 }
 
@@ -55,11 +55,16 @@ p{
 }
 
 .picture{
-    margin-top: 10%;
+    border-style: solid;
+    
+    width: 200px;
 }
 
 .btn{
     border-radius: 0%;
+    background-color: #0e5491;
+    margin-bottom: 20px;
+    
 }
 
 /*Über Mich*/
@@ -79,7 +84,10 @@ p{
         text-align: center;
         padding: 3% 7%;
     }
-
+    
+    .picture{
+        margin: 0 0 20px 0;
+    }
    
    
 }
@@ -128,7 +136,7 @@ p{
 
 .portfolioStyle{
     font-family: 'Exo 2', sans-serif;
-    background-color: #6BAAE1;
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
 }
 
 
@@ -148,8 +156,9 @@ p{
 
 
 .footer{
-    background-color: #6BAAE1;
-    padding: 10%;
+    background-image: linear-gradient(to bottom right, #fafafa, #0e5491);
+    padding: 15px;
+      
 }
 
 
@@ -163,15 +172,17 @@ p{
     bottom: 50px;
     right: 30px;
     z-index: 100;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
+    font-size: 25px;
+    
+    
     border: none;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 30%;
     cursor: pointer;
 }
+ 
 
-#nachOben:hover {
-    background-color: #0056b3;
+
+#nachOben:hover, .btn:hover {
+    background-color: #a9c7e9;
 }
