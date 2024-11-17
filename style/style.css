@@ -253,4 +253,21 @@ p {
     .lightning-vertical::after {
         left: 85%; /* Zweiter Blitz besser sichtbar */
     }
+
+
+    .position-relative {
+        text-align: center; /* Zentriert den Text in der Spalte */
+    }
+
+    h3 {
+        text-align: center; /* Zentriert das <h3> explizit */
+        margin: 0 auto; /* Entfernt mögliche ungleiche Außenabstände */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 auto;
+        width: 100%; /* Sicherstellen, dass der gesamte Bereich genutzt wird */
+    }
+
+
 }
