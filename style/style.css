@@ -1,7 +1,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    
+    /*Test für linien-Animation*/
+   
 }
 
 h3{
@@ -29,7 +30,7 @@ p{
 
 
 .container-fluid{
-    padding: 3% 15% 3%;
+    padding: 1% 15% 1%;
 }
 
 
@@ -185,4 +186,39 @@ p{
 
 #nachOben:hover, .btn:hover {
     background-color: #a9c7e9;
+}
+
+
+
+/*Linie animation*/
+
+
+.line-container {
+    position: relative;
+    width: 100%;
+    height: 10px; /* Die Linie wird jetzt auf eine feste Höhe begrenzt */
+    overflow: hidden;
+    margin: 0 0 50px 0; /* Zentriert die Linie */
+    background: transparent;
+}
+
+.glowing-line {
+    position: absolute;
+    top: 0; /* Linie wird oben im Container platziert */
+    left: 0;
+    width: 200%;
+    height: 100%; /* Füllt die Höhe des Containers */
+    background: linear-gradient(90deg, transparent, #00f, #46b2ff, #00f, transparent);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00f, 0 0 20px #46b2ff, 0 0 30px #00f;
+    animation: moveLine 8s linear infinite;
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
