@@ -87,8 +87,19 @@ p{
     
     .picture{
         margin: 0 0 20px 0;
+        width: 100%; /* Passt das Bild an */
+        z-index: 2; /* Das Bild bleibt im Vordergrund */
+        position: relative;
     }
    
+
+    .position-relative {
+        position: relative;
+      }
+
+
+
+      
    
 }
 
@@ -186,3 +197,92 @@ p{
 #nachOben:hover, .btn:hover {
     background-color: #a9c7e9;
 }
+
+
+/* Zickzack-Blitze: Horizontale Blitze (hinter Name und Titel) */
+.lightning-horizontal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Hintergrund */
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  @keyframes horizontal-lightning {
+    0%, 100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+  }
+  
+  .lightning-horizontal::before,
+  .lightning-horizontal::after {
+    content: "";
+    position: absolute;
+    height: 4px; /* Blitzhöhe */
+    width: 200px; /* Breite eines Blitzsegments */
+    background: #fff;
+    clip-path: polygon(0 50%, 25% 0, 50% 50%, 75% 0, 100% 50%, 75% 100%, 50% 50%, 25% 100%);
+    animation: horizontal-lightning 6s linear infinite;
+  }
+  
+  .lightning-horizontal::before {
+    top: 22%; /* Position des ersten Blitzes */
+    animation-delay: 0.5s;
+  }
+  
+  .lightning-horizontal::after {
+    top: 65%; /* Position des zweiten Blitzes */
+    animation-delay: 1.5s;
+  }
+  
+  /* Zickzack-Blitze: Vertikale Blitze (hinter dem Foto) */
+  .lightning-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Hintergrund */
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  @keyframes vertical-lightning {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }
+  
+  .lightning-vertical::before,
+  .lightning-vertical::after {
+    content: "";
+    position: absolute;
+    width: 4px; /* Blitzbreite */
+    height: 200px; /* Höhe eines Blitzsegments */
+    background: #fff;
+    clip-path: polygon(50% 0, 100% 25%, 50% 50%, 100% 75%, 50% 100%, 0 75%, 50% 50%, 0 25%);
+    animation: vertical-lightning 4s linear infinite;
+  }
+  
+  .lightning-vertical::before {
+    left: 5%; /* Position des ersten Blitzes */
+    animation-delay: 0.5s;
+  }
+  
+  .lightning-vertical::after {
+    left: 95%; /* Position des zweiten Blitzes */
+    animation-delay: 1.5s;
+  }
