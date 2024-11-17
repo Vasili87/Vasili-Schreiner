@@ -74,7 +74,10 @@ p {
         text-align: center;
         padding: 3% 7%;
     }
-
+    
+    .picture{
+        margin: 0 0 20px 0;
+    }
    
    
 }
@@ -154,7 +157,9 @@ p {
     border-radius: 50%;
     cursor: pointer;
 }
+ 
 
-#nachOben:hover {
-    background-color: #0056b3;
+
+#nachOben:hover, .btn:hover {
+    background-color: #a9c7e9;
 }

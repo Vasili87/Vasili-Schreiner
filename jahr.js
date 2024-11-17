@@ -17,6 +17,3 @@ function nachObenFunktion() {
     document.body.scrollTop = 0; // Für Safari
     document.documentElement.scrollTop = 0; // Für Chrome, Firefox, IE und Opera
 }
-
-
-
