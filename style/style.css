@@ -23,7 +23,7 @@ p {
 
 /* Zentrierte Inhalte im Container */
 .position-relative {
-    position: relative;
+    
     display: flex; /* Aktiviert Flexbox */
     flex-direction: column; /* Elemente untereinander */
     align-items: center; /* Zentriert horizontal */
@@ -258,4 +258,26 @@ p {
 .lightning-vertical::after {
     left: 70%;
     animation-delay: 1.5s;
+}
+
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .position-relative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h3, h1 {
+        margin: 0;
+        text-align: center; /* Sicherstellen, dass der Text auch hier zentriert bleibt */
+        width: 100%; /* Verhindert, dass Elemente nach außen ragen */
+        line-height: 1.4; /* Verbessert Lesbarkeit */
+    }
+
+    .btn {
+        margin-top: 10px; /* Abstand unterhalb des Texts */
+    }
 }
