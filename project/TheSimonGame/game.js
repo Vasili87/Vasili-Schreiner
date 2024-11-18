@@ -11,7 +11,7 @@ var started = false;
 
 var level = 0;
 
-$(document).on("keypress touchstart", function(){
+$(document).keypress(function(){
 
   if(!started){
     $("#level-title").text("Level " + level);
@@ -22,7 +22,7 @@ $(document).on("keypress touchstart", function(){
 });
 
 
-$(".btn").on("click touchstart", function(){
+$(".btn").click(function(){
 
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
